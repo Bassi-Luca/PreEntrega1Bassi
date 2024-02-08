@@ -1,6 +1,7 @@
 let NombreUsuario;
 let Cliente;
 let TipoUsuario;
+let tipoServicio;
 
 // Funcion de Login
 function Login() {
@@ -71,7 +72,13 @@ function Menu() {
 
 // Funcion Servicios
 function TipoServicio() {
-  let tipoServicio = prompt(" 1.- Limpieza \n 2.- Hospedaje \n 3.- Paseo");
+  tipoServicio = prompt(" 1.- Limpieza \n 2.- Hospedaje \n 3.- Paseo");
+  while (tipoServicio === "" || (tipoServicio !== "1" && tipoServicio !== "2" && tipoServicio !== "3")){
+    alert("Elejir unos de nuestros servicios! \n \n");
+    TipoServicio();
+  }
+  return;
+  
 }
 
 Login();
