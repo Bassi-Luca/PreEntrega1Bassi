@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Curso Js - Coderhouse</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="blocks.css">
+        <link href="style.css" rel="stylesheet">
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
+    </head>
+    <body>
+        <main class="me-auto ms-auto text-center">
+            <p>Bassi Luca - Pre entrega 2</p>
+            
+                <div> 
+                    <img class="img-fluid mb-4" width="100" height="100" src="image/logo.jpg" alt="logo pata corazon perro" loading="lazy">
+                    <h1 class="h3 mb-3 fw-normal">Bienvenido en Corapet</h1>
+                </div>
+            
+            <section>
+                <div class="container"> 
+                    <div class="row"> 
+                        <div class="d-grid gap-2 col-6"> 
+                            <button id="btnGroupDrop1" type="button" class="btn btn-lg btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Area clientes
+                            </button>
+                            
+                                <div class="btn-group dropdown-menu" aria-labelledby="btnGroupDrop1" role="group">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="validCorreo" class="form-label">Correo</label>
+                                            <div class="input-group has-validation"><span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                                <input type="text" class="form-control is-invalid" id="validEmail" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                                                <div id="InvalidEmail" class="invalid-feedback">
+                                                    Inserir correo correcto!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationServerUsername" class="form-label">Password</label>
+                                            <div class="input-group has-validation"><span class="input-group-text" id="inputGroupPrepend3">123</span>
+                                                <input type="text" class="form-control is-invalid" id="validPwd" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                                                <div id="InvalidPwd" class="invalid-feedback">
+                                                    Inserir una contrasena correcta!.
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" type="submit">Submit form</button>
+                                        </div>
+                                    </form>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown"></div>
+                    </div>                     
+                    <div class="d-grid gap-2 col-6"> 
+                        <button id="btnGroupDrop1" type="button" class="btn btn-lg btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuevo cliente
+                        </button>
+                        <div class="btn-group" role="group">
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown"></div>                         
+                    </div>                     
+                </div>
+            </div>
+        </section>
+        <footer class="col-12">
+            <p class="mt-5 mb-3 text-muted">© Bassi Luca - Coderhouse 2024</p>
+        </footer>
+    </main>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="pgia/lib/pgia.js"></script>
+</body>
+</html>

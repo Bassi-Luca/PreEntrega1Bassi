@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <title>Curso Js - Coderhouse - Servicios</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="blocks.css"/>
+    </head>
+    <body>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-auto mx-auto">
+                        <h1 class="bg-danger fw-light text-white">Nuestros servicios!</h1>
+                        <p id="nombreCliente" class="lead text-muted"></p>
+                        <section class="pb-5 pt-5 text-black-50">
+                            <div class="container">
+                                <div class="justify-content-center row">
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3" rel="paseo"><img class="image-fit img-fluid w-25" alt="..." src="image/estetica.png"/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servEstetica">
+                                Estética</h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="precios fw-light h4 mb-0"> </p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" type="button" style="box-shadow: none" id="btnEstetica">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3" rel="paseo"><img class="image-fit img-fluid w-25" alt="..." src="image/hospedaje.png"/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servHospedaje">
+                                Hospedaje </h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="precios fw-light h4 mb-0"> </p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" id="btnHospedaje" type="button">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3"><img class="img-fluid w-25" alt="..." src="image/paseo.png"/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servPaseo">Paseo</h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="precios fw-light h4 mb-0"> </p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" id="btnPaseo" type="button">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3"><img src="image/guarderia.png" class="img-fluid w-25" alt="..."/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servGuarderia">
+                                Guardería del día </h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="precios fw-light h4 mb-0"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" id="btnGuarderia" type="button">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3"><img src="image/casa.png" class="img-fluid w-25" alt="..."/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servVisita">
+                                Visita en casa </h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="precios fw-light h4 mb-0"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" id="btnVisita" type="button">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 pb-3 pt-3">
+                                        <div class="bg-light border overflow-hidden p-3 rounded-3"><a href="#" class="d-block mb-3"><img class="img-fluid w-25" alt="..." src="image/veterinario.png"/></a>
+                                            <div>
+                                                <div class="align-items-center row">
+                                                    <div class="col-sm pb-2 pt-2"><a href="#" class="text-dark text-decoration-none"><h3 class="h5 mb-1" id="servVet">
+                                Buscar veterinario </h3></a>
+                                                        <p class="mb-0 small">Short description</p>
+                                                    </div>
+                                                    <div class="col-sm-auto pb-2 pt-2">
+                                                        <p class="fw-light h4 mb-0"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="pb-2 pt-2">
+                                                    <button class="btn btn-danger btn-sm ps-3 pe-3 rounded-pill" id="btnVet" type="button">
+                                                        Buy Now
+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- Seleccion talla mascota -->
+            <section class="py-5 text-center container">
+                <div class="bg-danger mb-4 row">
+                    <div class="col-lg-12 col-md-auto mx-auto">
+                        <h1 class="bg-danger fw-light text-white">Que mascota tienes?</h1>
+                        <p class="lead text-white">Elijas el tamano!</p>
+                    </div>
+                </div>
+                <div id="tipoMascota" class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="Pequeño" autocomplete="off"/>
+                    <label class="btn btn-outline-primary" for="Pequeño">Pequeño </label>
+                    <input type="radio" class="btn-check" name="btnradio" id="Mediano" autocomplete="off"/>
+                    <label class="btn btn-outline-primary" for="Mediano">Mediano</label>
+                    <input type="radio" class="btn-check" name="btnradio" id="Grande" autocomplete="off"/>
+                    <label class="btn btn-outline-primary" for="Grande">Grande</label>
+                    <input type="radio" class="btn-check" name="btnradio" id="Gigante" autocomplete="off"/>
+                    <label class="btn btn-outline-primary" for="Gigante">Gigante</label>
+                </div>
+            </section>
+            <section class="container py-5 text-center">
+                <div class="bg-body row">
+                    <div class="col-lg-12 col-md mx-auto">
+                        <h1 class="bg-danger fw-light text-white" id="totalCarrito"></h1>
+                        <div id="carrito" class="ms-5 text-start"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="container invisible py-5 text-center">
+                <div class="row">
+                    <div class="col-lg-12 col-md-auto mx-auto">
+                        <h1 class="bg-danger fw-light text-white">
+              En cuales dias necesitas ? </h1>
+                        <p class="lead text-muted">Elijas los dias!</p>
+                    </div>
+                </div>
+                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                    <input placeholder="Select date" type="text" id="example" class="form-control"/>
+                    <label for="example">Try me...</label>
+                    <i class="fas fa-calendar input-prefix"></i>
+                </div>
+            </section>
+        </main>
+        <div class="container-fluid position-absolute">
+            <footer class="py-5 text-muted">
+                <div class="container">
+                    <p class="mb-3 mt-5 text-center text-muted">
+            © Bassi Luca - Coderhouse 2024 </p>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!--  <script src="./js/login.js"></script> -->
+        <script src="./js/servicios.js"></script>
+        <script src="pgia/lib/pgia.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <a href="https://www.flaticon.com/free-icons/dog-training" title="dog training icons">Dog training icons created by Freepik - Flaticon</a><a href="https://www.flaticon.com/free-icons/petshop" title="petshop icons">Petshop icons created by berkahicon - Flaticon</a><a href="https://www.flaticon.com/free-icons/pet" title="pet icons">Pet icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/dog-training" title="dog training icons">Dog training icons created by Freepik - Flaticon</a><a href="https://www.flaticon.com/free-icons/pet-bed" title="pet bed icons">Pet bed icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/veterinary" title="veterinary icons">Veterinary icons created by Freepik - Flaticon</a>
+    </body>
+</html>
