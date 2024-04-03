@@ -1,0 +1,18 @@
+[
+  {
+    "talla": "Pequeno",
+    "precio": ""
+  },
+  {
+    "talla": "Mediano",
+    "precio": 200
+  },
+  {
+    "talla": "Grande",
+    "precio": 300
+  },
+  {
+    "talla": "Gigante",
+    "precio": 450
+  }
+]

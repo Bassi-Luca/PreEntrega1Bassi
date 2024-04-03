@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Estética",
+    "precio": 200,
+    "descripcion": "Corte de pelo, baño e higiene",
+    "imagen": "image/estetica.png"
+  },
+  {
+    "nombre": "Hospedaje",
+    "precio": 300,
+    "descripcion": "Hospedaje para tu mascota",
+    "imagen": "image/hospedaje.png"
+  },
+  {
+    "nombre": "Paseo",
+    "precio": 150,
+    "descripcion": "Paseo de 30 minutos",
+    "imagen": "image/paseo.png"
+  },
+  {
+    "nombre": "Guardería del día",
+    "precio": 400,
+    "descripcion": "Cuidado de tu mascota durante el día",
+    "imagen": "image/guarderia.png"
+  },
+  {
+    "nombre": "Visita en casa",
+    "precio": 150,
+    "descripcion": "Visita a domicilio",
+    "imagen": "image/casa.png"
+  },
+  {
+    "nombre": "Buscar Veterinario",
+    "precio": 1000,
+    "descripcion": "Búsqueda de veterinario para tu mascota",
+    "imagen": "image/veterinario.png"
+  }
+]

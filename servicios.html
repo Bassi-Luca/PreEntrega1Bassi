@@ -1,332 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <title>Curso Js - Coderhouse - Servicios</title>
-    <!-- Bootstrap core CSS -->
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="blocks.css" />
-  </head>
-  <body>
-    <main>
-      <section class="py-5 text-center container">
-        <div class="row">
-          <div class="col-lg-12 col-md-auto mx-auto">
-            <h1 class="bg-danger fw-light text-white">Nuestros servicios!</h1>
-            <p id="nombreCliente" class="lead text-muted"></p>
-            <section class="pb-5 pt-5 text-black-50">
-              <div class="container">
-                <div class="justify-content-center row">
-                  <!-- Servicios--------------------------------------------------- -->
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3" rel="paseo"
-                        ><img
-                          class="image-fit img-fluid w-25"
-                          alt="..."
-                          src="image/estetica.png"
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2 text-dark">
-                            <h3 class="nombreServicio h5 mb-1"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <title>Curso Js - Coderhouse - Servicios</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="blocks.css"/>
+    </head>
+    <body>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-auto mx-auto">
+                        <h1 class="bg-danger fw-light text-white">Nuestros servicios!</h1>
+                        <p id="nombreCliente" class="lead text-muted"></p>
+                        <div class="container pb-auto pt-auto">
+                            <div class="col-md-9 col-xl-8 ms-auto me-auto">
+                                <form role="form">
+                                    <div class="align-items-center d-flex gx-2 justify-content-center row">
+                                        <div class="col-6 mb-3">
+                                            <input id="buscadorServicios" type="text" class="bg-light border-2 border-danger form-control fst-italic is-invalid pe-4 ps-4 rounded-pill text-danger" placeholder="Aqui puedes buscar nuestros servicios!"/>
+                                            <div id="errorBusqueda" class="fst-italic fw-semibold invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-servicio btn-sm pe-3 ps-3 rounded-pill"
-                            type="button"
-                            style="box-shadow: none"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
+                        <!------------------------------------- Seleccion talla mascota -->
+                        <section class="py-5 text-center container">
+                            <div class="bg-danger mb-4 row">
+                                <div class="col-lg-12 col-md-auto mx-auto">
+                                    <h1 class="bg-danger fw-light text-white">
+                    Que mascota tienes? </h1>
+                                    <p class="lead text-white">Elijas el tamano!</p>
+                                </div>
+                            </div>
+                            <div id="tipoMascota" class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                                <!-- contenido talla dinamico -->
+                                <!-- <input type="radio" class="btn-check" name="btnradio" id="Pequeño" autocomplete="off"/>
+                              <label class="btn btn-outline-primary" for="Pequeño" required>Pequeño</label>
+                              <input type="radio" class="btn-check" name="btnradio" id="Mediano" autocomplete="off"/>
+                              <label class="btn btn-outline-primary" for="Mediano" required>Mediano<br>+30$
+                              </label>
+                              <input type="radio" class="btn-check" name="btnradio" id="Grande" autocomplete="off"/>
+                              <label class="btn btn-outline-primary" for="Grande" required>Grande</label>
+                              <input type="radio" class="btn-check" name="btnradio" id="Gigante" autocomplete="off"/>
+                              <label class="btn btn-outline-primary" for="Gigante" required>Gigante</label> -->
+                            </div>
+                        </section>
+                        <!----------------------------------- Seleccion fecha servicios-->
+                        <section class="container py-5 text-center">
+                            <div class="bg-danger row">
+                                <div class="col-lg-12 col-md-auto mx-auto">
+                                    <h1 class="bg-danger fw-light text-white">
+                    En cuales dias necesitas ? </h1>
+                                    <p class="lead text-white">
+                    Elijas los dias! Maximo 6 meses de disponibilidad! </p>
+                                </div>
+                            </div>
+                            <div class="d-inline-flex justify-content-between mt-3 w-75">
+                                <div id="date-picker-example" class="col-5 datepicker input-with-post-icon md-form md-outline" inline="true">
+                                    <input placeholder="Select date" type="date" id="inicioServicios" class="form-control"/>
+                                    <label for="example">Inicio</label>
+                                    <i class="fas fa-calendar input-prefix"></i>
+                                </div>
+                                <div id="date-picker-example" class="col-5 datepicker input-with-post-icon md-form md-outline" inline="true">
+                                    <input placeholder="Select date" type="date" id="finServicios" class="form-control"/>
+                                    <label for="example">Fin</label>
+                                    <i class="fas fa-calendar input-prefix"></i>
+                                </div>
+                                <div id="errorFecha" class="fst-italic fw-semibold invalid-feedback"></div>
+                            </div>
+                        </section>
+                        <!-- Seccion de todos los sevicios (dinamico) -->
+                        <section class="pb-5 pt-5 text-black-50">
+                            <div class="container">
+                                <div id="cajaServicios" class="justify-content-center row">
+                                    <!-- Servicios--------------------------------------------------- -->
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3" rel="paseo"
-                        ><img
-                          class="image-fit img-fluid w-25"
-                          alt="..."
-                          src="image/hospedaje.png"
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2 text-dark">
-                            <h3 class="nombreServicio h5 mb-1"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
-                        </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-servicio btn-sm pe-3 ps-3 rounded-pill"
-                            type="button"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3"
-                        ><img
-                          class="img-fluid w-25"
-                          alt="..."
-                          src="image/paseo.png"
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2">
-                            <h3 class="nombreServicio h5 mb-1 text-dark"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
-                        </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-servicio btn-sm pe-3 ps-3 rounded-pill"
-                            type="button"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3"
-                        ><img
-                          src="image/guarderia.png"
-                          class="img-fluid w-25"
-                          alt="..."
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2">
-                            <h3 class="nombreServicio text-dark h5 mb-1"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
-                        </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-servicio btn-sm pe-3 ps-3 rounded-pill"
-                            type="button"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3"
-                        ><img
-                          src="image/casa.png"
-                          class="img-fluid w-25"
-                          alt="..."
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2">
-                            <h3 class="nombreServicio text-dark h5 mb-1"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
-                        </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-servicio btn-sm pe-3 ps-3 rounded-pill"
-                            type="button"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 pb-3 pt-3">
-                    <div class="bg-light border overflow-hidden p-3 rounded-3">
-                      <a href="#" class="d-block mb-3"
-                        ><img
-                          class="img-fluid w-25"
-                          alt="..."
-                          src="image/veterinario.png"
-                      /></a>
-                      <div>
-                        <div class="align-items-center row">
-                          <div class="col-sm pb-2 pt-2">
-                            <h3 class="nombreServicio text-dark h5 mb-1"></h3>
-                            <p class="mb-0 small">Short description</p>
-                          </div>
-                          <div class="col-sm-auto pb-2 pt-2">
-                            <p class="precios fw-light h4 mb-0"></p>
-                          </div>
-                        </div>
-                        <div class="pb-2 pt-2">
-                          <button
-                            class="btn btn-danger btn-sm pe-3 ps-3 rounded-pill btn-servicio"
-                            type="button"
-                          >
-                            Buy Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </section>
-          </div>
+            <!-- -----------------------------carrito -->
+            <section class="container py-5 text-center">
+                <div class="bg-body row">
+                    <div class="align-items-center bg-danger col-lg-12 col-md d-flex float-none justify-content-between mx-auto">
+                        <h1 class="bg-danger float-start fw-light text-white" id="totalCarrito"></h1>
+                        <button id="btnFinalizarCarrito" class="align-items-center btn btn-light btn-sm d-flex flex-row-reverse fst-italic fw-semibold mb-2 ms-auto mt-2 pe-3 placeholder-wave ps-3 rounded-pill text-muted text-wrap" type="button" style="box-shadow: none" name="finalizarCarrito">
+                            Finalizar Compra!
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cash-coin me-2 text-center text-success" viewBox="0 0 16 16" width="35">
+                                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                            </svg>
+                        </button>
+                        <button id="btnVaciarCarrito" class="active align-items-center btn btn-light btn-sm d-flex fst-italic fw-semibold mb-2 ms-auto mt-2 pe-3 placeholder-wave ps-3 rounded-pill text-muted text-wrap" type="button" style="box-shadow: none" name="vaciarCarrito">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart-x img-fluid text-center text-danger" viewBox="0 0 16 16" width="35">
+                                <path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793 7.354 5.646z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg>
+                            Vaciar carrito
+                        </button>
+                    </div>
+                    <div id="carrito" class="ms-5 text-start"></div>
+                </div>
+            </section>
+        </main>
+        <div class="container-fluid position-absolute">
+            <footer class="py-5 text-muted">
+                <div class="container">
+                    <p class="mb-3 mt-5 text-center text-muted">
+            © Bassi Luca - Coderhouse 2024 </p>
+                </div>
+            </footer>
         </div>
-      </section>
-      <!-- Seleccion talla mascota -->
-      <section class="py-5 text-center container">
-        <div class="bg-danger mb-4 row">
-          <div class="col-lg-12 col-md-auto mx-auto">
-            <h1 class="bg-danger fw-light text-white">Que mascota tienes?</h1>
-            <p class="lead text-white">Elijas el tamano!</p>
-          </div>
-        </div>
-        <div
-          id="tipoMascota"
-          class="btn-group w-100"
-          role="group"
-          aria-label="Basic radio toggle button group"
-        >
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="Pequeño"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary" for="Pequeño" required
-            >Pequeño
-          </label>
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="Mediano"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary" for="Mediano" required
-            >Mediano</label
-          >
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="Grande"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary" for="Grande" required
-            >Grande</label
-          >
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="Gigante"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary" for="Gigante" required
-            >Gigante</label
-          >
-        </div>
-      </section>
-      <!-- -----------------------------carrito -->
-      <section class="container py-5 text-center">
-        <div class="bg-body row">
-          <div class="col-lg-12 col-md mx-auto">
-            <h1 class="bg-danger fw-light text-white" id="totalCarrito"></h1>
-            <div id="carrito" class="ms-5 text-start"></div>
-          </div>
-        </div>
-      </section>
-      <section class="container invisible py-5 text-center">
-        <div class="row">
-          <div class="col-lg-12 col-md-auto mx-auto">
-            <h1 class="bg-danger fw-light text-white">
-              En cuales dias necesitas ?
-            </h1>
-            <p class="lead text-muted">Elijas los dias!</p>
-          </div>
-        </div>
-        <div
-          id="date-picker-example"
-          class="md-form md-outline input-with-post-icon datepicker"
-          inline="true"
-        >
-          <input
-            placeholder="Select date"
-            type="text"
-            id="example"
-            class="form-control"
-          />
-          <label for="example">Try me...</label>
-          <i class="fas fa-calendar input-prefix"></i>
-        </div>
-      </section>
-    </main>
-    <div class="container-fluid position-absolute">
-      <footer class="py-5 text-muted">
-        <div class="container">
-          <p class="mb-3 mt-5 text-center text-muted">
-            © Bassi Luca - Coderhouse 2024
-          </p>
-        </div>
-      </footer>
-    </div>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!--  <script src="./js/login.js"></script> -->
-    <script src="./js/servicios.js"></script>
-    <script src="pgia/lib/pgia.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <a
-      href="https://www.flaticon.com/free-icons/dog-training"
-      title="dog training icons"
-      >Dog training icons created by Freepik - Flaticon</a
-    ><a href="https://www.flaticon.com/free-icons/petshop" title="petshop icons"
-      >Petshop icons created by berkahicon - Flaticon</a
-    ><a href="https://www.flaticon.com/free-icons/pet" title="pet icons"
-      >Pet icons created by Freepik - Flaticon</a
-    >
-    <a
-      href="https://www.flaticon.com/free-icons/dog-training"
-      title="dog training icons"
-      >Dog training icons created by Freepik - Flaticon</a
-    ><a href="https://www.flaticon.com/free-icons/pet-bed" title="pet bed icons"
-      >Pet bed icons created by Freepik - Flaticon</a
-    >
-    <a
-      href="https://www.flaticon.com/free-icons/veterinary"
-      title="veterinary icons"
-      >Veterinary icons created by Freepik - Flaticon</a
-    >
-  </body>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!--  <script src="./js/login.js"></script> -->
+        <script src="./js/servicios.js"></script>
+        <script src="pgia/lib/pgia.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><a href="https://www.flaticon.com/free-icons/dog-training" title="dog training icons">Dog training icons created by Freepik - Flaticon</a><a href="https://www.flaticon.com/free-icons/petshop" title="petshop icons">Petshop icons created by berkahicon - Flaticon</a><a href="https://www.flaticon.com/free-icons/pet" title="pet icons">Pet icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/dog-training" title="dog training icons">Dog training icons created by Freepik - Flaticon</a><a href="https://www.flaticon.com/free-icons/pet-bed" title="pet bed icons">Pet bed icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/veterinary" title="veterinary icons">Veterinary icons created by Freepik - Flaticon</a>
+    </body>
 </html>
